@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="http://www.kelly3d.com/favicon.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet2.css">    
+    <script src="javascript.js"> </script>
+
+    <title>CS230 Assignment 2 - Sean Kelly</title>
+  </head>
+<body onload = "setEditable()">
+  <div class="wrapper">
+
+
+  <!-- NOTE place heading and logo here -->
+  <header class="header">
+
+        <table id="header_t_b" >
+          <tr>
+              <td id="header" colspan="7"><h1>Student Assignment Grades</h1>
+
+              </td>
+
+              <td id="logo" colspan="1">
+                  <img
+                      src="http://www.kelly3d.com/MULogo.png"
+                      href="http://www.maynoothuniversity.com">
+              </td>
+          </tr>
+
+        </table>
+  </header>
+
+<article class="content">
+    <!-- NOTE use id to identify elements in js code.  They must be unique, otherwise use class -->
+    <table id="dataTable" class="mt"  onload="setEditable" onkeyup="clickFlag(); checkValid">
+
+            <tr class="table-header">
+                <td class="mt-ht">Student Name</td>
+                <td class="mt-ht">ID Number</td>
+                <td class="mt-ht" contenteditable="true" id="2" ondblclick="rowSelect(id);">Assignment 1</td>
+                <td class="mt-fg">Final Grade</td>
+            </tr>
+            <tr class="default-row">
+                <td contenteditable="true" class="mt-c" ondblclick="colSelect(id)" >-</td>
+                <td contenteditable="true" class="mt-c">-</td>
+                <td contenteditable="true" class="mt-asmt" id="2" ondblclick="colSelect(id)">-</td>
+                <td contenteditable="true" class="mt-finRes" id="finResult">-</td>
+
+            </tr>
+
+    </table>
+
+    </article>
+
+    <aside>
+
+    <table>
+      <tr>
+        <td colspan="2">
+        <div id="remainder">Unsubmitted:</div>
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          <button class="btn" onclick="calcFinal();getNoGrade();">Final Grade</button>
+        </td>
+        <td>
+          <button class="btn" onclick="getMessage();getAllCookies();">Click Me</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <button class="btn" onclick="addRow();setEditable()">+ Row</button>
+        </td>
+        <td>
+          <button class="btn" onclick="addColumn();setEditable()">+ Column</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <button class="btn" onclick="deleteRows()">- Row</button>
+        </td>
+        <td>
+          <button class="btn" onclick="deleteColumns()">- Column</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <button class="btn" onclick="setCookie();getCSV();setEditable()">Save Cookie</button>
+        </td>
+        <td>
+          <button class="btn" onclick="getCookie();setEditable()">Load Cookie</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <button class="btn" onclick="deleteCookie();setEditable()">Delete Cookie</button>
+        </td>
+        <td>
+          <button class="btn" onclick="showCookie()">Show Cookie</button>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <button class="btn" onclick="deleteSelectedColumns()">Delete Selected Col</button>
+        </td>
+        <td>
+          <button class="btn" onclick="deleteSelectedRows()">Delete Selected Row</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!--TODO Make method that holds click info -->
+          <button class="btn" onclick="getUndo();">Undo Del Row</button>
+        </td>
+
+        <td>
+          <!--TODO Make method that holds click info -->
+          <button class="btn" onclick="getUndo();">Undo Del Column</button>
+        </td>
+      <tr>
+        <td colspan="2">
+            <textarea title="text area" id="CSV"></textarea>
+        </td>
+      </tr>
+
+    </table>
+
+    </aside>
+
+
+    <link rel="stylesheet" href="js/javaScript.css" type="text/css">
+
+  </body>
+</html>
