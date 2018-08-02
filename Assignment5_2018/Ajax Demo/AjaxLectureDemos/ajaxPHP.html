@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#search").keyup(function() {
+     var search_string = $("#search").val();
+     if(search_string == '') {
+       $("#options").html(''); 
+     } else {
+       postdata = {'string' : search_string};
+       $.post("ajaxCall.php",postdata,function(data) { 
+         $("#options").html(data); 
+       });
+     }
+  });
+});
+
+function selectMe(title) { 
+  $("#search").val(title);
+  $("#options").html('');
+}
+</script>
+</head>
+<body>
+  <div class="header"><input type="text" class="search" id="search" placeholder="Search CD Albums in Library" autocomplete="off"></div>
+  <div id="options" class="options"></div>
+</body>
+</html>

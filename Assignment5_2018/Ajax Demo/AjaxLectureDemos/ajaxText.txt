@@ -1,0 +1,3 @@
+Contents of AJAX Text File
+
+Used for testing AJAX call
