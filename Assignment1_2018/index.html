@@ -1,0 +1,185 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <link rel="shortcut icon" href="http://www.kelly3d.com/favicon.png" type="image/x-icon">
+
+    <meta charset="utf-8">
+    <title>Class Grades Table</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="javascript.js"> </script>    
+
+</head>
+
+<body onload = "makeEditable()">
+
+
+<table id="myTable" class="tg" onkeyup="checkClicked(); checkValidity()">
+
+    <tr>
+        <td id="header" colspan="7"><h1>Student Assignment Grades</h1>
+
+        </td>
+
+
+        <td id="logo" colspan="1">
+            <img 
+                src="http://www.kelly3d.com/MULogo.png" 
+                href="http://www.maynoothuniversity.com">            
+        </td>
+
+    </tr>
+
+    <tr>
+        <th class="elem-h">Name</th> 
+        <th class="elem-h">ID number</th>
+        <th contenteditable="true" class="elem-h">Assignment 1</th> 
+        <th contenteditable="true" class="elem-h">Assignment 2</th>
+        <th contenteditable="true" class="elem-h">Assignment 3</th>
+        <th contenteditable="true" class="elem-h">Assignment 4</th>
+        <th contenteditable="true" class="elem-h">Assignment 5</th>
+        <th class="elem-finG">Final Grade Average</th>
+    </tr>
+
+    <tr>
+        <td id="white_rows2" class="name">George Carlin</td>
+        <td id="white_rows2" class="ID">17185521</td>
+        <td contenteditable="true" id="elem-1" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-2" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-3" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-4" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-5" class="elem-g">-</td>
+        <td id="grades1" class="elem-gr">-</td>
+    </tr>
+
+    <tr>
+        <td id="white_rows" class="name">Richard Pryor</td>
+        <td id="white_rows" class="ID">17185522</td>
+        <td contenteditable="true" id="elem-6" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-7" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-8" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-9" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-10" class="elem-g">-</td>
+        <td id="grades2" class="elem-gr">-</td>
+    </tr>
+
+    <tr>
+        <td id="white_rows2" class="name">Eddie Murphy</td>
+        <td id="white_rows2" class="ID">17185523</td>
+        <td contenteditable="true" id="elem-11" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-12" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-13" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-14" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-15" class="elem-g">-</td>
+        <td id="grades3" class="elem-gr">-</td>
+    </tr>    
+
+    <tr>
+        <td id="white_rows" class="name">Bill Murray</td>
+        <td id="white_rows" class="ID">17185524</td>
+        <td contenteditable="true" id="elem-16" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-17" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-18" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-19" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-20" class="elem-g">-</td>
+        <td id="grades4" class="elem-gr">-</td>
+    </tr>  
+
+    <tr>
+        <td id="white_rows2" class="name">Joe Rogan</td>
+        <td id="white_rows2" class="ID">17185525</td>
+        <td contenteditable="true" id="elem-21" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-22" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-23" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-24" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-25" class="elem-g">-</td>
+        <td id="grades5" class="elem-gr">-</td>
+    </tr>   
+    
+    <tr>
+        <td id="white_rows" class="name">Tommy Tiernan</td>
+        <td id="white_rows" class="ID">17185526</td>
+        <td contenteditable="true" id="elem-26" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-27" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-28" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-29" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-30" class="elem-g">-</td>
+        <td id="grades6" class="elem-gr">-</td>
+    </tr>
+
+    <tr>
+        <td id="white_rows2" class="name">Ade Edmondson</td>
+        <td id="white_rows2" class="ID">17185527</td>
+        <td contenteditable="true" id="elem-31" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-32" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-33" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-34" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-35" class="elem-g">-</td>
+        <td id="grades7" class="elem-gr">-</td>
+    </tr>
+
+    <tr>
+        <td id="white_rows" class="name">Rik Mayall</td>
+        <td id="white_rows" class="ID">17185528</td>
+        <td contenteditable="true" id="elem-36" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-37" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-38" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-39" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-40" class="elem-g">-</td>
+        <td id="grades8" class="elem-gr">-</td>
+    </tr>    
+
+    <tr>
+        <td id="white_rows2" class="name">John Candy</td>
+        <td id="white_rows2" class="ID">17185529</td>
+        <td contenteditable="true" id="elem-41" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-42" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-43" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-44" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-45" class="elem-g">-</td>
+        <td id="grades9" class="elem-gr">-</td>
+    </tr>  
+
+    <tr>
+        <td id="white_rows" class="name">Billy Connolly</td>
+        <td id="white_rows" class="ID">17185530</td>
+        <td contenteditable="true" id="elem-46" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-47" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-48" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-49" class="elem-g">-</td>
+        <td contenteditable="true" id="elem-50" class="elem-g">-</td>
+        <td id="grades10" class="elem-gr">-</td>
+    </tr>         
+
+</table>
+
+
+<table id="extras" class="tg" align=center> 
+
+    <tr>
+        <td id="button">
+            <button id="btn" onclick="setClicked();calcFinal();getNoGrade();">Calculate Mean</button> 
+        </td>         
+        <td id="csv_spacer">
+
+
+            <button id="csv_button" onclick="getCSV();">Get CSV Data</button>                
+
+         <td id="text_area">   
+        <textarea title="textArea" id="CSV"></textarea>
+        </td>
+
+            <th class="counter">Remaining<br class="remaining">        <p id="paragraph"></p>
+           
+        </th>
+
+    </tr>
+
+</table>
+
+</body>
+
+</html>
+
